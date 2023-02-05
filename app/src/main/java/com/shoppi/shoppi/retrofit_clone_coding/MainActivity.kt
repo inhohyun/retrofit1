@@ -40,25 +40,26 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun retrofitWork() {
-        val service = RetrofitApi.emgMedService
+//        val service = RetrofitApi.emgMedService
+//
+//        service.getEmgMedData(getString(R.string.api_key), "json")
+//            .enqueue(object : Callback<EmgMedResponse> {
+//                override fun onResponse(
+//                    call: Call<EmgMedResponse>,
+//                    response: Response<EmgMedResponse>
+//                ) {
+//                    if (response.isSuccessful) {
+////                        Log.d("TAG", response.body().toString())
+//                        val result = response.body()?.emgMedInfo?.get(1)?.row
+//                        emgMedAdapter.submitList(result!!)
+//                    }
+//                }
+//
+//                override fun onFailure(call: Call<EmgMedResponse>, t: Throwable) {
+//                    Log.d("TAG", t.message.toString())
+//                }
+//            })
 
-        service.getEmgMedData(getString(R.string.api_key), "json")
-            .enqueue(object : Callback<EmgMedResponse> {
-                override fun onResponse(
-                    call: Call<EmgMedResponse>,
-                    response: Response<EmgMedResponse>
-                ) {
-                    if (response.isSuccessful) {
-//                        Log.d("TAG", response.body().toString())
-                        val result = response.body()?.emgMedInfo?.get(1)?.row
-                        emgMedAdapter.submitList(result!!)
-                    }
-                }
-
-                override fun onFailure(call: Call<EmgMedResponse>, t: Throwable) {
-                    Log.d("TAG", t.message.toString())
-                }
-            })
 
 //        CoroutineScope(Dispatchers.IO).launch {
 //            val response = service.getDataCoroutine(getString(R.string.api_key), "json")
